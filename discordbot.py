@@ -12,6 +12,16 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send('pong')
+
+@bot.command()
+async def tell(ctx):
+    await ctx.send('そんなキーワードは　ぜろっぺだよ')        
+    
+    
 @bot.event
 async def on_message(message):
     """メッセージを処理"""
@@ -22,12 +32,5 @@ async def on_message(message):
         # チャンネルへメッセージを送信
         await message.channel.send(f"{message.author.mention}さん 寝ましょう")  # f文字列（フォーマット済
 
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-
-@bot.command()
-async def tell(ctx):
-    await ctx.send('そんなキーワードは　ぜろっぺだよ')    
 
 bot.run(token)
