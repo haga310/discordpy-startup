@@ -31,6 +31,8 @@ async def on_message(message):
     if message.content == "!眠たい":
         # チャンネルへメッセージを送信
         await message.channel.send(f"{message.author.mention}さん 寝ましょう")  # f文字列（フォーマット済
+        
+    await bot.process_commands(message)
 
 
 bot.run(token)
