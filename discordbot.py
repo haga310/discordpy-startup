@@ -4,8 +4,7 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-InMember=[]
-#インサイダーゲームの参加メンバリスト
+
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -13,13 +12,7 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-@bot.command()
-async def InsiderJoin(ctx):
-    await ctx.send(f"{ctx.author.mention}さんをインサイダーゲームのプレイヤーに追加しました。")
-    InMember.append(str(ctx.author.mention))
-    await ctx.send("log--"InMember)
-    
-    
+
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
@@ -27,7 +20,8 @@ async def ping(ctx):
 @bot.command()
 async def tell(ctx):
     await ctx.send('そんなキーワードは　ぜろっぺだよ')        
-
+    
+    
 @bot.event
 async def on_message(message):
     """メッセージを処理"""
