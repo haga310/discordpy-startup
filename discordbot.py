@@ -12,7 +12,10 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-
+@bot.command()
+async def InsiderAdd(ctx):
+    await ctx.send(f"{ctx.author.mention}さんをインサイダーゲームのプレイヤーに追加しました。")
+    InMember.append(str(ctx.author.mention))
 
 @bot.command()
 async def ping(ctx):
