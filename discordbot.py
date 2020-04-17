@@ -4,8 +4,7 @@ import traceback
 import random 
 
 bot = commands.Bot(command_prefix='/')#,help_command=commands.MinimalHelpCommand())
-token = 'Njk3MDAzNTUwMzcwMTY4ODMy.Xpl-WA.paoFH34Krxd8a2GXV5gAeSsCOYk'
-#token = os.environ['DISCORD_BOT_TOKEN']
+token = os.environ['DISCORD_BOT_TOKEN']
 InMember=[]
 master=0
 insider=1
