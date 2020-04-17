@@ -22,7 +22,6 @@ async def InsiderJoin(ctx):
 @bot.command()
 async def StartInsider(ctx):
     await ctx.send("インサイダーゲームの開始じゃい。参加プレイヤーはInsiderJoinコマンドを打つベシ")
-    InMember.append(str(ctx.author.mention))
     await ctx.send("log--"InMember)    
     
 @bot.command()
