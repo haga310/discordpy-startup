@@ -4,7 +4,8 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-InMember=[]　#インサイダーゲームの参加メンバリスト
+InMember=[]
+#インサイダーゲームの参加メンバリスト
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -29,10 +30,9 @@ async def tell(ctx):
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title="Zeroppe", description="A Very Zeroppe bot. List of commands are:", color=0xeee657)
-    embed.add_field(name="/ping", value="You will play Ping-Pong with Zeroppe", inline=False)
-    
+ #   embed.add_field(name="/ping", value="You will play Ping-Pong with Zeroppe", inline=False)
     await ctx.send(embed=embed)
-    
+
 @bot.event
 async def on_message(message):
     """メッセージを処理"""
