@@ -19,6 +19,7 @@ async def InsiderJoin(ctx):
     InMember.append(str(ctx.author.mention))
     await ctx.send("log--"InMember)
     
+    
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
