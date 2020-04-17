@@ -15,8 +15,8 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def InsiderAdd(ctx):
     await ctx.send(f"{ctx.author.mention} さんをインサイダーゲームのプレイヤーに追加しました。")
-    InMember.append(str(ctx.author.mention))
-    ctx.send("log--"InMember)
+    await InMember.append(str(ctx.author.mention))
+    await ctx.send("log--"InMember)
 
 @bot.command()
 async def ping(ctx):
