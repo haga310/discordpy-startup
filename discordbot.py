@@ -32,6 +32,7 @@ async def help(ctx):
     embed = discord.Embed(title="Zeroppe", description="A Very Zeroppe bot. List of commands are:", color=0xeee657)
     embed.add_field(name="/ping", value="You will play Ping-Pong with Zeroppe", inline=False)
     
+    await ctx.send(embed=embed)
     
 @bot.event
 async def on_message(message):
