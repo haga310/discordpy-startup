@@ -4,8 +4,7 @@ import traceback
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-InMember=[]
-#インサイダーゲームの参加メンバ
+InMember=[]　#インサイダーゲームの参加メンバリスト
 
 @bot.event
 async def on_command_error(ctx, error):
