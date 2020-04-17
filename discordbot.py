@@ -19,6 +19,11 @@ async def InsiderAdd(ctx):
     #await ctx.send("log--"InMember)
 
 @bot.command()
+async def ShowPlayer(ctx):
+    await ctx.send("インサイダーゲームの参加者は")
+    await ctx.send(InMember)
+    
+@bot.command()
 async def ping(ctx):
     await ctx.send('pong')
 
