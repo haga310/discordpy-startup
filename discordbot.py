@@ -18,11 +18,6 @@ async def InsiderJoin(ctx):
     await ctx.send(f"{ctx.author.mention}さんをインサイダーゲームのプレイヤーに追加しました。")
     InMember.append(str(ctx.author.mention))
     await ctx.send("log--"InMember)
-
-@bot.command()
-async def StartInsider(ctx):
-    await ctx.send("インサイダーゲームの開始じゃい。参加プレイヤーはInsiderJoinコマンドを打つベシ")
-    await ctx.send("log--"InMember)    
     
 @bot.command()
 async def ping(ctx):
@@ -31,12 +26,6 @@ async def ping(ctx):
 @bot.command()
 async def tell(ctx):
     await ctx.send('そんなキーワードは　ぜろっぺだよ')        
-    
-#@bot.command()
-#async def help(ctx):
- #   embed = discord.Embed(title="Zeroppe", description="A Very Zeroppe bot. List of commands are:", color=0xeee657)
- #   embed.add_field(name="/ping", value="You will play Ping-Pong with Zeroppe", inline=False)
-#    await ctx.send(embed=embed)
 
 @bot.event
 async def on_message(message):
