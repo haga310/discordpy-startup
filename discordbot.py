@@ -17,8 +17,7 @@ async def on_command_error(ctx, error):
 async def InsiderAdd(ctx):
     await ctx.send(f"{ctx.author.mention}さん")
     InMember.append(str(ctx.author.mention))
-    await ctx.send("log")
-    await ctx.send(InMember)
+    await ctx.send("log--"InMember)
     
 @bot.command()
 async def ping(ctx):
